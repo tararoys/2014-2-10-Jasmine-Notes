@@ -41,6 +41,17 @@ describe("Tara is", function() {
          expect(my_broken_object_literal.key).toBe(null);
        });
 
+      it("Create an object via constructor", function(){
+        function Toolbag (hammer, wrench){
+          this.hammer = hammer;
+          this.wrench = wrench;
+        }
+
+        var toolbag = new Toolbag("hammer", "wrench");
+        expect(toolbag.hammer).toBe("hammer");
+        expect(toolbag.wrench).toBe("wrench");
+      });
+
 
 
     });
