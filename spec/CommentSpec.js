@@ -30,7 +30,18 @@ describe("Tara is", function() {
       
        });
 
- 
+      it("function should not be able to change values in the object literal without using the this keyword", function(){
+         my_broken_object_literal = {
+           key : null,
+          set_the_key: function(set_key){
+            key = set_key
+          }
+         };
+         my_broken_object_literal.set_the_key(3);
+         expect(my_broken_object_literal.key).toBe(null);
+       });
+
+
 
     });
   });
