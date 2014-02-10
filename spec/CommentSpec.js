@@ -1,5 +1,10 @@
-describe("Comment", function() {
-  it("should have a failing test", function() {
-    expect(false).toBe(true);
-  })
+describe("Tara is", function() {
+  
+  describe("Learning How To Set up Jasmine", function(){
+    it("should written have a passing test", function() {
+      stuff= expect(true).toBe(true);
+    });
+  });
+
+
 });
