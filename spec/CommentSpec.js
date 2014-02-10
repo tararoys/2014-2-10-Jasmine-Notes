@@ -52,6 +52,24 @@ describe("Tara is", function() {
         expect(toolbag.wrench).toBe("wrench");
       });
 
+      it("Add a method to a constructor using the prototype method", function(){
+        function Toolbag(){
+          this.hammer = "hammer";
+          this.wrench = "wrench";
+        }
+
+        Toolbag.prototype.toolList = function(){
+          return "you have a" + this.hammer + " and a " +  this.wrench;
+
+        };
+
+        my_tools = new Toolbag();
+
+        expect(my_tools.toolList()).toBe("you have ahammer and a wrench");
+
+
+      });
+
 
 
     });
