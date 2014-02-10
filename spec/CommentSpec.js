@@ -17,6 +17,20 @@ describe("Tara is", function() {
         expect(my_first_object_literal.another_key).toBe("another_value");
       });
 
+      it("Should create an object literal with a function", function(){
+         my_second_object_literal_with_a_function = {
+           key : null,
+          set_the_key: function(set_key){
+            this.key = set_key
+          }
+         };
+
+         my_second_object_literal_with_a_function.set_the_key(3);
+         expect(my_second_object_literal_with_a_function.key).toBe(3);
+      
+       });
+
+ 
 
     });
   });
